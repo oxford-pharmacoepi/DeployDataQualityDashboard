@@ -2,7 +2,7 @@ library(shiny)
 library(DataQualityDashboard)
 
 # path to the jsonfile
-jsonPath <- here::here("cdm_gold_202207_dqd.json")
+jsonPath <- here::here("...")
 
 server <- function(input, output, session) {
   observe({
