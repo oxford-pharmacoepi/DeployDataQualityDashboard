@@ -1,8 +1,9 @@
 library(shiny)
 library(DataQualityDashboard)
+library(here)
 
 # path to the jsonfile
-jsonPath <- here::here("...")
+jsonPath <- here("...")
 
 server <- function(input, output, session) {
   observe({
@@ -14,7 +15,7 @@ server <- function(input, output, session) {
 
 ui <- fluidPage(
   suppressDependencies("bootstrap"),
-  shiny::htmlTemplate(filename = here::here("www", "index.html")),
+  shiny::htmlTemplate(filename = here("www", "index.html")),
   tags$head(
     tags$script(src = "js/loadResults.js"),
     tags$script("Shiny.addCustomMessageHandler('results', loadResults);")
