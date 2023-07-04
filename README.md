@@ -9,10 +9,8 @@ Once you have it downloaded open the file: `DeployDataQualityDashboard.Rproj`
 ## 2. Setup your libraries
 
 We are going to sue the following libraries: `shiny`, `here`, `jsonlite`, `remotes` and `DataQualityDashboard`. If you don't have them installed please install:
-
-To install from CRAN, run the following command from R console: `install.packages(c("shiny", "here", "jsonlite", "remotes"))`
-
-To install from github, run the following command from R console: `remotes::install_github("ohdsi/DataQualityDashboard")`
+- To install from CRAN, run the following command from R console: `install.packages(c("shiny", "here", "jsonlite", "remotes"))`
+- To install from github, run the following command from R console: `remotes::install_github("ohdsi/DataQualityDashboard")`
 
 ## 3. Open and run the app
 
