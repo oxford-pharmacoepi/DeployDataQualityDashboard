@@ -1,26 +1,25 @@
 library(shiny)
 library(DataQualityDashboard)
 library(here)
+library(jsonlite)
 
 # path to the jsonfile
-jsonPath <- here("...")
+jsonPath <- here("cdm_gold_202207_dqd.json")
+results <- convertJsonResultsFileCase(jsonPath, writeToFile = FALSE, targetCase = "camel")
+results <- parse_json(toJSON(results))
 
 server <- function(input, output, session) {
-  observe({
-    results <- convertJsonResultsFileCase(jsonPath, writeToFile = FALSE, targetCase = "camel")
-    results <- jsonlite::parse_json(jsonlite::toJSON(results))
-    session$sendCustomMessage("results", results)
-  })
+  session$sendCustomMessage("results", results)
 }
 
 ui <- fluidPage(
   suppressDependencies("bootstrap"),
-  shiny::htmlTemplate(filename = here("www", "index.html")),
+  htmlTemplate(filename = here("www", "index.html")),
   tags$head(
     tags$script(src = "js/loadResults.js"),
     tags$script("Shiny.addCustomMessageHandler('results', loadResults);")
   )
 )
 
-shiny::shinyApp(ui = ui, server = server)
+shinyApp(ui = ui, server = server)
 

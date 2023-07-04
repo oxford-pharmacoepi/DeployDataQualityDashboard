@@ -158,7 +158,7 @@ function loadResults(results) {
             { data: function (d) { return d.subcategory ? d.subcategory : "None" }, title: "SUBCATEGORY" },
             { data: "checkLevel", title: "LEVEL" },
             { data: function (d) { if (d.notesValue == null) { return "None"; } else { return "Exists"; } }, title: "NOTES" },
-            
+
             {
                 data: function (d) {
                     thresholdMessage = '';
