@@ -14,6 +14,6 @@ We are going to sue the following libraries: `shiny`, `here`, `jsonlite`, `remot
 
 ## 3. Open and run the app
 
-Open the file: `app.R`, edit line 7 of `app.R` and change `...` to the json file name e.g. `jsonPath <- here::here("cdm_new_database_dqd.json")` and run the whole script.
+Open the file: `app.R`, edit line 7 of `app.R` and change `...` to the json file name e.g. `jsonPath <- here("cdm_new_database_dqd.json")` and run the whole script.
 
 The shiny should pop up and you should be able to deploy it with the **publish** button on the top right
