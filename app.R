@@ -4,7 +4,7 @@ library(here)
 library(jsonlite)
 
 # path to the jsonfile
-jsonPath <- here("cdm_gold_202207_dqd.json")
+jsonPath <- here("...")
 results <- convertJsonResultsFileCase(jsonPath, writeToFile = FALSE, targetCase = "camel")
 results <- parse_json(toJSON(results))
 
